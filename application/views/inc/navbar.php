@@ -86,7 +86,3 @@
     </nav><!-- /.navbar -->
 </div><!-- /.container-fluid -->
 
-
-<script type="text/javascript">
-
-</script>
