@@ -1,6 +1,7 @@
 
-
-<h2><?php echo $title; ?> Information</h2>
+<center>
+	<h2><?php echo $title; ?> Information</h2>
+</center>
 	<div class="col-md-3"></div>
 
 	<div class="col-md-6">
