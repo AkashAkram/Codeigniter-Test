@@ -2,7 +2,7 @@
 class HomeController extends CI_Controller{
 
 
-	 function __construct() {
+	function __construct() {
         parent::__construct();
 		$this->load->model('AkCrudModel');
 		$this->load->view('inc/header');
@@ -10,8 +10,7 @@ class HomeController extends CI_Controller{
 	
 	public function index()
 	{
-		$data['content'] = $this->AkCrudModel->display();
-
+		$data['content'] = $this->AkCrudModel->displayAllUser();
 		$this->load->view('HomeView',$data);
 		$this->load->view('inc/footer');
 	}
@@ -77,5 +76,14 @@ class HomeController extends CI_Controller{
 		$this->AkCrudModel->removeUser($id);
 		redirect('/');
 	}
+
+	public function viewUser($id)
+	{
+		$data['content'] = $this->AkCrudModel->displayThisUser($id);
+		//echo $data['content']['name'];
+		$this->load->view('homeView',$data);
+		$this->load->view('inc/footer');
+	}
+
 
 }

@@ -57,6 +57,7 @@ $route['insert'] = 'HomeController/insertUser';
 $route['modify/(:any)'] = 'HomeController/editUser/$1';
 $route['update/(:any)'] = 'HomeController/updateUser/$1';
 $route['remove/(:any)'] = 'HomeController/removeUser/$1';
+$route['view/(:any)'] = 'HomeController/viewUser/$1';
 
 
 

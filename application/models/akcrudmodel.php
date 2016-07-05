@@ -14,10 +14,17 @@ class akCrudModel extends CI_Model
 	}
 
 
-	public function display()
+	public function displayAllUser()
 	{
 		$this->db->from('users');
 		$this->db->order_by('id', 'DESC');
+		$query = $this->db->get(); 
+		return $query->result();
+	}
+	public function displayThisUser($id)
+	{
+		$this->db->from('users');
+		$this->db->where('id',$id);
 		$query = $this->db->get(); 
 		return $query->result();
 	}
